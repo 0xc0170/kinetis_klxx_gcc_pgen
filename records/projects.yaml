@@ -1,0 +1,3 @@
+projects:
+    frdm-k64f-blinky:
+        - records/frdm-k64f-blinky.yaml
