@@ -30,3 +30,6 @@
 
 # Debug files
 *.dSYM/
+
+# pgen generated files
+generated_projects/*

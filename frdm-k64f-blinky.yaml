@@ -1,0 +1,37 @@
+common:
+  includes:
+  - gpio_demo_frdmk64f
+  - cmsis
+  - cmsis/MK64F12
+  linker_file:
+  - cmsis/MK64F12/MK64F12.ld
+  sources:
+  - gpio_demo_frdmk64f
+  - cmsis/MK64F12
+  target:
+  - frdm-k64f
+
+tool_specific:
+  cmake_gcc_arm:
+    misc:
+      optimization:
+      - O0
+      standard_libraries:
+      - m
+      - gcc
+      - c
+      - nosys
+      common_flags:
+      - -g
+      - -ggdb
+      - -Wall
+      - -fno-strict-aliasing
+      - -ffunction-sections
+      - -fdata-sections
+      - -fno-exceptions
+      - -fno-delete-null-pointer-checks
+      - -fmessage-length=0
+      - -fno-builtin
+      - -mthumb
+      asm_flags:
+      - -x assembler-with-cpp
